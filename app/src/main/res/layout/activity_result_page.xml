@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultPage">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:text="Name:">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/nameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="3dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Appscrip"/>
+
+    <TextView
+        android:id="@+id/questionOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:text="Who is the best cricketer in the world?">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/answerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questionOne"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:text="Answer:">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/answerOneView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/answerOne"
+        app:layout_constraintTop_toBottomOf="@id/questionOne"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Sachin Tendulkar"/>
+
+    <TextView
+        android:id="@+id/questionTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/answerOneView"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:text="What are the colours in the national flag?">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/answerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/questionTwo"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:text="Answer:">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/answerTwoView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/answerTwo"
+        app:layout_constraintTop_toBottomOf="@id/questionTwo"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="White,Yellow,Orange,Green"/>
+
+
+    <TableLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/answerTwoView"
+        android:layout_marginTop="10dp">
+
+        <TableRow>
+            <TextView
+                android:text="Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1" />
+
+            <EditText
+
+                android:id="@+id/u_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:width="150dp"
+                android:cursorVisible="false"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Answer One"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1" />
+
+            <EditText
+                android:id="@+id/u_answer_one"
+                android:width="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="20sp"
+                android:cursorVisible="false"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Answer Two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1" />
+
+            <EditText
+                android:id="@+id/u_answer_two"
+                android:width="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="20sp"
+                android:cursorVisible="false"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="350sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        >
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="wrap_content"
+            android:layout_height="350sp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/startPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="START PAGE"
+        android:onClick="mainPage">
+
+    </Button>
+
+    <Button
+        android:id="@+id/viewRecords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="View Records"
+        android:onClick="viewRecord"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewRecords"
+        app:layout_constraintEnd_toStartOf="@id/startPage"
+        android:text="Save"
+        android:onClick="saveRecord"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">App Trivia</string>
+    <string name="questionOneOptionOne">Sachin Tendulkar</string>
+    <string name="questionOneOptionTwo">Virat Kohli</string>
+    <string name="questionOneOptionThree">Adam Gilchrist</string>
+    <string name="questionOneOptionfour">Jacques Kallis</string>
+
+    <string name="questionTwoOptionOne">White</string>
+    <string name="questionTwoOptionTwo">Yellow</string>
+    <string name="questionTwoOptionThree">Orange</string>
+    <string name="questionTwoOptionFour">Green</string>
+</resources>
